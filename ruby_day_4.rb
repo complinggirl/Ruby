@@ -14,9 +14,9 @@ i = 0
 
 
 
-# snowy_lines.each_slice(4){
-#   |a| puts last_word(a[0]) +" "+ last_word(a[2])+"\n" +last_word(a[1]) +" "+ last_word(a[3])
-# }
+snowy_lines.each_slice(4){
+  |a| puts last_word(a[0]) +" "+ last_word(a[2])+"\n" +last_word(a[1]) +" "+ last_word(a[3])
+}
 
 snowy_lines.each_slice(4){
   |a| myArray = a.map{|b| last_word(b)}

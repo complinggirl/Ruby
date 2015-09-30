@@ -21,30 +21,30 @@ split_pattern = /[\W]+/
 # puts "..."
 #
 
-# puts "Here are the lines of snowy that have an odd number of words"
-#
-# snowy_lines.each do |line|
-#   puts line if line.split.size % 2 == 0
-# end
-#
+puts "Here are the lines of snowy that have an odd number of words"
+
+snowy_lines.each do |line|
+  puts line.split.length if line.split.size % 2 == 1
+end
+
 #
 #
 # puts "Here is Snowy double-spaced"
 #
 # puts snowy.gsub(" ", "  ")
 #
-
-snowy = snowy.gsub("\n\n","\n")
-snowy_lines = snowy.lines
-
-puts "Here are all the rhyming pairs from the ends of the Snowy lines"
-i = 0
-while i < snowy_lines.count
-  word1 = snowy_lines[i].split(split_pattern).last
-  word2 = snowy_lines[i+1].split(split_pattern).last
-  word3 = snowy_lines[i+2].split(split_pattern).last
-  word4 = snowy_lines[i+3].split(split_pattern).last
-  puts word1 +" "+word3
-  puts word2 + " " + word4
-  i+=4
-end
+#
+# snowy = snowy.gsub("\n\n","\n")
+# snowy_lines = snowy.lines
+#
+# puts "Here are all the rhyming pairs from the ends of the Snowy lines"
+# i = 0
+# while i < snowy_lines.count
+#   word1 = snowy_lines[i].split(split_pattern).last
+#   word2 = snowy_lines[i+1].split(split_pattern).last
+#   word3 = snowy_lines[i+2].split(split_pattern).last
+#   word4 = snowy_lines[i+3].split(split_pattern).last
+#   puts word1 +" "+word3
+#   puts word2 + " " + word4
+#   i+=4
+# end
