@@ -5,8 +5,12 @@ class Response
     @@responses << new(question, answers)
   end
 
-  def self.add_dummies question, *answers
-    @@responses << new("",answers)
+  def self.add_dummies *answers
+    @@responses << new("$$",answers)
+  end
+
+  def self.get_dummies
+    @@resonses.select{|r| r.good_for? "$$"}
   end
 
   def self.get_answer question
@@ -14,7 +18,7 @@ class Response
     if responses.length > 0
       responses.sample.get_answers.sample
     else
-      responses.sample.get_answers.sample
+      self.get_dummies.sample.get_answers.sample
     end
   end
 

@@ -7,5 +7,9 @@ loop do
 
   exit if entered == 'q'
 
-  puts Response.get_answer entered
+  if entered == ""
+    puts "Go on"
+  else
+    puts Response.get_answer entered
+  end
 end
