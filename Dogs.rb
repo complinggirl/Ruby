@@ -1,3 +1,5 @@
+# Creates a dog class with methods so that you can walk your dog(s) or make them bark
+
 class Dog
   attr_accessor :name, :age, :breed
 
